@@ -1,9 +1,9 @@
-from sqlmodel import Field, Relationship, SQLModel
+from sqldev import Field, Relationship, SQLDev
 
 
 # Shared properties
-# TODO replace email str with EmailStr when sqlmodel supports it
-class UserBase(SQLModel):
+# TODO replace email str with EmailStr when sqldev supports it
+class UserBase(SQLDev):
     email: str = Field(unique=True, index=True)
     is_active: bool = True
     is_superuser: bool = False
@@ -15,27 +15,27 @@ class UserCreate(UserBase):
     password: str
 
 
-# TODO replace email str with EmailStr when sqlmodel supports it
-class UserRegister(SQLModel):
+# TODO replace email str with EmailStr when sqldev supports it
+class UserRegister(SQLDev):
     email: str
     password: str
     full_name: str | None = None
 
 
 # Properties to receive via API on update, all are optional
-# TODO replace email str with EmailStr when sqlmodel supports it
+# TODO replace email str with EmailStr when sqldev supports it
 class UserUpdate(UserBase):
     email: str | None = None  # type: ignore
     password: str | None = None
 
 
-# TODO replace email str with EmailStr when sqlmodel supports it
-class UserUpdateMe(SQLModel):
+# TODO replace email str with EmailStr when sqldev supports it
+class UserUpdateMe(SQLDev):
     full_name: str | None = None
     email: str | None = None
 
 
-class UpdatePassword(SQLModel):
+class UpdatePassword(SQLDev):
     current_password: str
     new_password: str
 
@@ -52,13 +52,13 @@ class UserPublic(UserBase):
     id: int
 
 
-class UsersPublic(SQLModel):
+class UsersPublic(SQLDev):
     data: list[UserPublic]
     count: int
 
 
 # Shared properties
-class ItemBase(SQLModel):
+class ItemBase(SQLDev):
     title: str
     description: str | None = None
 
@@ -87,27 +87,27 @@ class ItemPublic(ItemBase):
     owner_id: int
 
 
-class ItemsPublic(SQLModel):
+class ItemsPublic(SQLDev):
     data: list[ItemPublic]
     count: int
 
 
 # Generic message
-class Message(SQLModel):
+class Message(SQLDev):
     message: str
 
 
 # JSON payload containing access token
-class Token(SQLModel):
+class Token(SQLDev):
     access_token: str
     token_type: str = "bearer"
 
 
 # Contents of JWT token
-class TokenPayload(SQLModel):
+class TokenPayload(SQLDev):
     sub: int | None = None
 
 
-class NewPassword(SQLModel):
+class NewPassword(SQLDev):
     token: str
     new_password: str
