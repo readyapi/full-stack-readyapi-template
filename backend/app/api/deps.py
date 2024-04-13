@@ -1,10 +1,10 @@
 from collections.abc import Generator
 from typing import Annotated
 
-from readyapi import Depends, HTTPException, status
-from readyapi.security import OAuth2PasswordBearer
 from jose import JWTError, jwt
 from pydantic import ValidationError
+from readyapi import Depends, HTTPException, status
+from readyapi.security import OAuth2PasswordBearer
 from sqlmodel import Session
 
 from app.core import security
