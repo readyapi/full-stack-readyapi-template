@@ -30,12 +30,12 @@ jobs:
         with:
           # To allow latest-changes to commit to the main branch
           token: ${{ secrets.ORG_REPO_TOKEN }}
-      - uses: docker://ghcr.io/khulnasoft/latest-changes:0.3.0
+      - uses: docker://khulnasoft/latest-changes:latest
       # - uses: khulnasoft/latest-changes@main
         with:
           token: ${{ secrets.GITHUB_TOKEN }}
-          ORG_REPO_TOKEN_file: ./release-notes.md
-          ORG_REPO_TOKEN_header: '## Latest Changes'
+          latest_changes_file: ./release-notes.md
+          latest_changes_header: '## Latest Changes'
           end_regex: '^## '
           debug_logs: true
           label_header_prefix: '### '
