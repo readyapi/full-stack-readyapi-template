@@ -2,6 +2,8 @@
 
 ## Latest Changes
 
+* Develop. PR [#6](https://github.com/khulnasoft/full-stack-readyapi-template/pull/6) by [@gitworkflows](https://github.com/gitworkflows).
+
 ### Features
 
 * ✨ Add support for deploying multiple environments (staging, production) to the same server. PR [#1128](https://github.com/khulnasoft/full-stack-readyapi-template/pull/1128) by [@khulnasoft](https://github.com/khulnasoft).
