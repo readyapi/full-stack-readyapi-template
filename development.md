@@ -69,7 +69,7 @@ That variable will be used by the Docker Compose files.
 After that, you can restart your stack with:
 
 ```bash
-docker compose up -d
+
 ```
 
 and check all the corresponding available URLs in the section at the end.

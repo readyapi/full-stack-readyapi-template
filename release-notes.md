@@ -2,7 +2,7 @@
 
 ## Latest Changes
 
-* Develop. PR [#6](https://github.com/khulnasoft/full-stack-readyapi-template/pull/6) by [@gitworkflows](https://github.com/gitworkflows).
+* 🔧 Ignore `src/routeTree.gen.ts` in biome. PR [#1175](https://github.com/khulnasoft/full-stack-readyapi-template/pull/1175) by [@patrick91](https://github.com/patrick91).
 
 ### Features
 
@@ -11,10 +11,19 @@
 
 ### Fixes
 
+* 🐛 Fix local Traefik proxy network config to fix Gateway Timeouts. PR [#1184](https://github.com/khulnasoft/full-stack-readyapi-template/pull/1184) by [@JoelGotsch](https://github.com/JoelGotsch).
+* ♻️ Fix tests when ready superuser password is changed in .env. PR [#1165](https://github.com/khulnasoft/full-stack-readyapi-template/pull/1165) by [@billzhong](https://github.com/billzhong).
+* 🐛 Fix bug when resetting password. PR [#1171](https://github.com/khulnasoft/full-stack-readyapi-template/pull/1171) by [@alejsdev](https://github.com/alejsdev).
 * 🐛 Fix 403 when the frontend has a directory without an index.html. PR [#1094](https://github.com/khulnasoft/full-stack-readyapi-template/pull/1094) by [@khulnasoft](https://github.com/khulnasoft).
 
 ### Refactors
 
+* 🔥 Remove duplicated code. PR [#1185](https://github.com/khulnasoft/full-stack-readyapi-template/pull/1185) by [@alejsdev](https://github.com/alejsdev).
+* ♻️ Add delete_user_me endpoint and corresponding test cases. PR [#1179](https://github.com/khulnasoft/full-stack-readyapi-template/pull/1179) by [@alejsdev](https://github.com/alejsdev).
+* ✅ Update test to add verification database records. PR [#1178](https://github.com/khulnasoft/full-stack-readyapi-template/pull/1178) by [@estebanx64](https://github.com/estebanx64).
+* 🚸 Use `useSuspenseQuery` to fetch members and show skeleton. PR [#1174](https://github.com/khulnasoft/full-stack-readyapi-template/pull/1174) by [@patrick91](https://github.com/patrick91).
+* 🎨 Format Utils. PR [#1173](https://github.com/khulnasoft/full-stack-readyapi-template/pull/1173) by [@alejsdev](https://github.com/alejsdev).
+* ✨ Use suspense for items page. PR [#1167](https://github.com/khulnasoft/full-stack-readyapi-template/pull/1167) by [@patrick91](https://github.com/patrick91).
 * 🚸 Mark login field as required. PR [#1166](https://github.com/khulnasoft/full-stack-readyapi-template/pull/1166) by [@patrick91](https://github.com/patrick91).
 * 🚸 Improve login. PR [#1163](https://github.com/khulnasoft/full-stack-readyapi-template/pull/1163) by [@patrick91](https://github.com/patrick91).
 * 🥅 Handle AxiosErrors in Login page. PR [#1162](https://github.com/khulnasoft/full-stack-readyapi-template/pull/1162) by [@patrick91](https://github.com/patrick91).
@@ -42,6 +51,8 @@
 
 ### Upgrades
 
+* Bump gunicorn from 21.2.0 to 22.0.0 in /backend. PR [#1176](https://github.com/khulnasoft/full-stack-readyapi-template/pull/1176) by [@dependabot[bot]](https://github.com/apps/dependabot).
+* Bump idna from 3.6 to 3.7 in /backend. PR [#1168](https://github.com/khulnasoft/full-stack-readyapi-template/pull/1168) by [@dependabot[bot]](https://github.com/apps/dependabot).
 * 🆙 Update React Query to TanStack Query. PR [#1153](https://github.com/khulnasoft/full-stack-readyapi-template/pull/1153) by [@patrick91](https://github.com/patrick91).
 * Bump vite from 5.0.12 to 5.0.13 in /frontend. PR [#1149](https://github.com/khulnasoft/full-stack-readyapi-template/pull/1149) by [@dependabot[bot]](https://github.com/apps/dependabot).
 * Bump follow-redirects from 1.15.5 to 1.15.6 in /frontend. PR [#734](https://github.com/khulnasoft/full-stack-readyapi-template/pull/734) by [@dependabot[bot]](https://github.com/apps/dependabot).
@@ -51,7 +62,7 @@
 * 📝 Update release-notes.md. PR [#1164](https://github.com/khulnasoft/full-stack-readyapi-template/pull/1164) by [@alejsdev](https://github.com/alejsdev).
 * 📝 Update `README.md`. PR [#716](https://github.com/khulnasoft/full-stack-readyapi-template/pull/716) by [@alejsdev](https://github.com/alejsdev).
 * 📝 Update instructions to clone for a private repo, including updates. PR [#1127](https://github.com/khulnasoft/full-stack-readyapi-template/pull/1127) by [@khulnasoft](https://github.com/khulnasoft).
-* 📝 Add docs about CI keys, LATEST_CHANGES and SMOKESHOW_AUTH_KEY. PR [#1126](https://github.com/khulnasoft/full-stack-readyapi-template/pull/1126) by [@khulnasoft](https://github.com/khulnasoft).
+* 📝 Add docs about CI keys, ORG_REPO_TOKEN and SMOKESHOW_AUTH_KEY. PR [#1126](https://github.com/khulnasoft/full-stack-readyapi-template/pull/1126) by [@khulnasoft](https://github.com/khulnasoft).
 * ✏️ Fix file path in `backend/README.md` when not wanting to use migrations. PR [#1116](https://github.com/khulnasoft/full-stack-readyapi-template/pull/1116) by [@leonlowitzki](https://github.com/leonlowitzki).
 * 📝 Add documentation for pre-commit and code linting. PR [#718](https://github.com/khulnasoft/full-stack-readyapi-template/pull/718) by [@estebanx64](https://github.com/estebanx64).
 * 📝 Fix localhost URLs in `development.md`. PR [#1099](https://github.com/khulnasoft/full-stack-readyapi-template/pull/1099) by [@efonte](https://github.com/efonte).

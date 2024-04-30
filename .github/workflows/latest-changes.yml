@@ -30,7 +30,7 @@ jobs:
         with:
           # To allow latest-changes to commit to the main branch
           token: ${{ secrets.ORG_REPO_TOKEN }}
-      - uses: docker://khulnasoft/latest-changes:latest
+      - uses: docker://khulnasoft/latest-changes:0.3.0
       # - uses: khulnasoft/latest-changes@main
         with:
           token: ${{ secrets.GITHUB_TOKEN }}

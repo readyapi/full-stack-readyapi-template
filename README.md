@@ -132,7 +132,7 @@ You can then update configs in the `.env` files to customize your configurations
 Before deploying it, make sure you change at least the values for:
 
 - `SECRET_KEY`
-- `FIRST_SUPERUSER_PASSWORD`
+- `READY_SUPERUSER_PASSWORD`
 - `POSTGRES_PASSWORD`
 
 You can (and should) pass these as environment variables from secrets.
@@ -202,8 +202,8 @@ The input variables, with their default values (some auto generated) are:
 - `project_name`: (default: `"ReadyAPI Project"`) The name of the project, shown to API users (in .env).
 - `stack_name`: (default: `"readyapi-project"`) The name of the stack used for Docker Compose labels and project name (no spaces, no periods) (in .env).
 - `secret_key`: (default: `"changethis"`) The secret key for the project, used for security, stored in .env, you can generate one with the method above.
-- `first_superuser`: (default: `"admin@example.com"`) The email of the first superuser (in .env).
-- `first_superuser_password`: (default: `"changethis"`) The password of the first superuser (in .env).
+- `ready_superuser`: (default: `"admin@example.com"`) The email of the ready superuser (in .env).
+- `ready_superuser_password`: (default: `"changethis"`) The password of the ready superuser (in .env).
 - `smtp_host`: (default: "") The SMTP server host to send emails, you can set it later in .env.
 - `smtp_user`: (default: "") The SMTP server user to send emails, you can set it later in .env.
 - `smtp_password`: (default: "") The SMTP server password to send emails, you can set it later in .env.
