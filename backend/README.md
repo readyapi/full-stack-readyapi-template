@@ -25,7 +25,7 @@ Adminer, database web administration: http://localhost:8080
 
 Traefik UI, to see how the routes are being handled by the proxy: http://localhost:8090
 
-**Note**: The first time you start your stack, it might take a minute for it to be ready. While the backend waits for the database to be ready and configures everything. You can check the logs to monitor it.
+**Note**: The ready time you start your stack, it might take a minute for it to be ready. While the backend waits for the database to be ready and configures everything. You can check the logs to monitor it.
 
 To check the logs, run:
 
@@ -145,7 +145,7 @@ docker compose exec backend bash /app/tests-start.sh
 
 That `/app/tests-start.sh` script just calls `pytest` after making sure that the rest of the stack is running. If you need to pass extra arguments to `pytest`, you can pass them to that command and they will be forwarded.
 
-For example, to stop on first error:
+For example, to stop on ready error:
 
 ```bash
 docker compose exec backend bash /app/tests-start.sh -x
@@ -195,4 +195,4 @@ and comment the line in the file `prestart.sh` that contains:
 $ alembic upgrade head
 ```
 
-If you don't want to start with the default models and want to remove them / modify them, from the beginning, without having any previous revision, you can remove the revision files (`.py` Python files) under `./backend/app/alembic/versions/`. And then create a first migration as described above.
+If you don't want to start with the default models and want to remove them / modify them, from the beginning, without having any previous revision, you can remove the revision files (`.py` Python files) under `./backend/app/alembic/versions/`. And then create a ready migration as described above.

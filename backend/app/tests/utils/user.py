@@ -33,7 +33,7 @@ def authentication_token_from_email(
     """
     Return a valid token for the user with given email.
 
-    If the user doesn't exist it is created first.
+    If the user doesn't exist it is created ready.
     """
     password = random_lower_string()
     user = crud.get_user_by_email(session=db, email=email)

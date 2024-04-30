@@ -15,8 +15,8 @@ jobs:
       DOMAIN: ${{ secrets.DOMAIN_STAGING }}
       STACK_NAME: ${{ secrets.STACK_NAME_STAGING }}
       SECRET_KEY: ${{ secrets.SECRET_KEY }}
-      FIRST_SUPERUSER: ${{ secrets.FIRST_SUPERUSER }}
-      FIRST_SUPERUSER_PASSWORD: ${{ secrets.FIRST_SUPERUSER_PASSWORD }}
+      READY_SUPERUSER: ${{ secrets.READY_SUPERUSER }}
+      READY_SUPERUSER_PASSWORD: ${{ secrets.READY_SUPERUSER_PASSWORD }}
       SMTP_HOST: ${{ secrets.SMTP_HOST }}
       SMTP_USER: ${{ secrets.SMTP_USER }}
       SMTP_PASSWORD: ${{ secrets.SMTP_PASSWORD }}

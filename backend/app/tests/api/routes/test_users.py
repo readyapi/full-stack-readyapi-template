@@ -17,7 +17,7 @@ def test_get_users_superuser_me(
     assert current_user
     assert current_user["is_active"] is True
     assert current_user["is_superuser"]
-    assert current_user["email"] == settings.FIRST_SUPERUSER
+    assert current_user["email"] == settings.READY_SUPERUSER
 
 
 def test_get_users_normal_user_me(
@@ -188,7 +188,7 @@ def test_update_password_me(
 ) -> None:
     new_password = random_lower_string()
     data = {
-        "current_password": settings.FIRST_SUPERUSER_PASSWORD,
+        "current_password": settings.READY_SUPERUSER_PASSWORD,
         "new_password": new_password,
     }
     r = client.patch(
@@ -203,7 +203,7 @@ def test_update_password_me(
     # Revert to the old password to keep consistency in test
     old_data = {
         "current_password": new_password,
-        "new_password": settings.FIRST_SUPERUSER_PASSWORD,
+        "new_password": settings.READY_SUPERUSER_PASSWORD,
     }
     r = client.patch(
         f"{settings.API_V1_STR}/users/me/password",
@@ -250,8 +250,8 @@ def test_update_password_me_same_password_error(
     client: TestClient, superuser_token_headers: dict[str, str]
 ) -> None:
     data = {
-        "current_password": settings.FIRST_SUPERUSER_PASSWORD,
-        "new_password": settings.FIRST_SUPERUSER_PASSWORD,
+        "current_password": settings.READY_SUPERUSER_PASSWORD,
+        "new_password": settings.READY_SUPERUSER_PASSWORD,
     }
     r = client.patch(
         f"{settings.API_V1_STR}/users/me/password",
@@ -302,7 +302,7 @@ def test_register_user_already_exists_error(client: TestClient) -> None:
         password = random_lower_string()
         full_name = random_lower_string()
         data = {
-            "email": settings.FIRST_SUPERUSER,
+            "email": settings.READY_SUPERUSER,
             "password": password,
             "full_name": full_name,
         }
@@ -428,7 +428,7 @@ def test_delete_user_not_found(
 def test_delete_user_current_super_user_error(
     client: TestClient, superuser_token_headers: dict[str, str], db: Session
 ) -> None:
-    super_user = crud.get_user_by_email(session=db, email=settings.FIRST_SUPERUSER)
+    super_user = crud.get_user_by_email(session=db, email=settings.READY_SUPERUSER)
     assert super_user
     user_id = super_user.id
 

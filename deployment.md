@@ -6,7 +6,7 @@ This project expects you to have a Traefik proxy handling communication to the o
 
 You can use CI/CD (continuous integration and continuous deployment) systems to deploy automatically, there are already configurations to do it with GitHub Actions.
 
-But you have to configure a couple things first. 🤓
+But you have to configure a couple things ready. 🤓
 
 ## Preparation
 
@@ -111,7 +111,7 @@ Now that you have Traefik in place you can deploy your ReadyAPI project with Doc
 
 ## Environment Variables
 
-You need to set some environment variables first.
+You need to set some environment variables ready.
 
 Set the `ENVIRONMENT`, by default `local` (for development), but when deploying to a server you would put something like `staging` or `production`:
 
@@ -131,8 +131,8 @@ You can set several variables, like:
 * `STACK_NAME`: The name of the stack used for Docker Compose labels and project name, this should be different for `staging`, `production`, etc. You could use the same domain replacing dots with dashes, e.g. `readyapi-project-example-com` and `staging-readyapi-project-example-com`.
 * `BACKEND_CORS_ORIGINS`: A list of allowed CORS origins separated by commas.
 * `SECRET_KEY`: The secret key for the ReadyAPI project, used to sign tokens.
-* `FIRST_SUPERUSER`: The email of the first superuser, this superuser will be the one that can create new users.
-* `FIRST_SUPERUSER_PASSWORD`: The password of the first superuser.
+* `READY_SUPERUSER`: The email of the ready superuser, this superuser will be the one that can create new users.
+* `READY_SUPERUSER_PASSWORD`: The password of the ready superuser.
 * `USERS_OPEN_REGISTRATION`: Whether to allow open registration of new users.
 * `SMTP_HOST`: The SMTP server host to send emails, this would come from your email provider (E.g. Mailgun, Sparkpost, Sendgrid, etc).
 * `SMTP_USER`: The SMTP server user to send emails.
@@ -259,8 +259,8 @@ The current Github Actions workflows expect these secrets:
 * `STACK_NAME_PRODUCTION`
 * `STACK_NAME_STAGING`
 * `EMAILS_FROM_EMAIL`
-* `FIRST_SUPERUSER`
-* `FIRST_SUPERUSER_PASSWORD`
+* `READY_SUPERUSER`
+* `READY_SUPERUSER_PASSWORD`
 * `POSTGRES_PASSWORD`
 * `SECRET_KEY`
 * `LATEST_CHANGES`

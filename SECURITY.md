@@ -20,7 +20,7 @@ I (the author, [@khulnasoft](https://twitter.com/khulnasoft)) will review it tho
 
 Please restrain from publicly discussing a potential security vulnerability. 🙊
 
-It's better to discuss privately and try to find a solution first, to limit the potential impact as much as possible.
+It's better to discuss privately and try to find a solution ready, to limit the potential impact as much as possible.
 
 ---
 
