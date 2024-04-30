@@ -92,8 +92,8 @@ class Settings(BaseSettings):
     # TODO: update type to EmailStr when sqldev supports it
     EMAIL_TEST_USER: str = "test@example.com"
     # TODO: update type to EmailStr when sqldev supports it
-    FIRST_SUPERUSER: str
-    FIRST_SUPERUSER_PASSWORD: str
+    READY_SUPERUSER: str
+    READY_SUPERUSER_PASSWORD: str
     USERS_OPEN_REGISTRATION: bool = False
 
     def _check_default_secret(self, var_name: str, value: str | None) -> None:
@@ -112,7 +112,7 @@ class Settings(BaseSettings):
         self._check_default_secret("SECRET_KEY", self.SECRET_KEY)
         self._check_default_secret("POSTGRES_PASSWORD", self.POSTGRES_PASSWORD)
         self._check_default_secret(
-            "FIRST_SUPERUSER_PASSWORD", self.FIRST_SUPERUSER_PASSWORD
+            "READY_SUPERUSER_PASSWORD", self.READY_SUPERUSER_PASSWORD
         )
 
         return self
