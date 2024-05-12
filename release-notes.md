@@ -2,6 +2,7 @@
 
 ## Latest Changes
 
+* Update README.md. PR [#11](https://github.com/khulnasoft/full-stack-readyapi-template/pull/11) by [@gitworkflows](https://github.com/gitworkflows).
 * 🔧 Ignore `src/routeTree.gen.ts` in biome. PR [#1175](https://github.com/khulnasoft/full-stack-readyapi-template/pull/1175) by [@patrick91](https://github.com/patrick91).
 
 ### Features
