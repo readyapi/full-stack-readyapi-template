@@ -301,4 +301,4 @@ Backend API docs: `https://staging.readyapi-project.example.com/docs`
 
 Backend API base URL: `https://staging.readyapi-project.example.com/api/`
 
-Adminer: `https://staging.adminer.readyapi-project.example.com`
+Adminer: `https://adminer.staging.readyapi-project.example.com`
