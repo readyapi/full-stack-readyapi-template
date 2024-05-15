@@ -2,6 +2,7 @@
 
 ## Latest Changes
 
+* 🔒️ Refactor migrate from python-jose to PyJWT. PR [#12](https://github.com/khulnasoft/full-stack-readyapi-template/pull/12) by [@FortiShield](https://github.com/FortiShield).
 * Bump jinja2 from 3.1.3 to 3.1.4 in /backend. PR [#10](https://github.com/khulnasoft/full-stack-readyapi-template/pull/10) by [@dependabot[bot]](https://github.com/apps/dependabot).
 * Update README.md. PR [#11](https://github.com/khulnasoft/full-stack-readyapi-template/pull/11) by [@gitworkflows](https://github.com/gitworkflows).
 * 🔧 Ignore `src/routeTree.gen.ts` in biome. PR [#1175](https://github.com/khulnasoft/full-stack-readyapi-template/pull/1175) by [@patrick91](https://github.com/patrick91).
