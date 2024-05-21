@@ -2,6 +2,7 @@
 
 ## Latest Changes
 
+* ✏️ Update README.md. PR [#17](https://github.com/khulnasoft/full-stack-readyapi-template/pull/17) by [@gitworkflows](https://github.com/gitworkflows).
 * ♻️ Refactor redirect labels to simplify removing the frontend. PR [#16](https://github.com/khulnasoft/full-stack-readyapi-template/pull/16) by [@gitworkflows](https://github.com/gitworkflows).
 * Docker compose redirect labels. PR [#15](https://github.com/khulnasoft/full-stack-readyapi-template/pull/15) by [@gitworkflows](https://github.com/gitworkflows).
 * ⚒️ Add minor frontend tweaks. PR [#14](https://github.com/khulnasoft/full-stack-readyapi-template/pull/14) by [@gitworkflows](https://github.com/gitworkflows).
