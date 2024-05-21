@@ -2,6 +2,7 @@
 
 ## Latest Changes
 
+* ♻️ Refactor redirect labels to simplify removing the frontend. PR [#16](https://github.com/khulnasoft/full-stack-readyapi-template/pull/16) by [@gitworkflows](https://github.com/gitworkflows).
 * Docker compose redirect labels. PR [#15](https://github.com/khulnasoft/full-stack-readyapi-template/pull/15) by [@gitworkflows](https://github.com/gitworkflows).
 * ⚒️ Add minor frontend tweaks. PR [#14](https://github.com/khulnasoft/full-stack-readyapi-template/pull/14) by [@gitworkflows](https://github.com/gitworkflows).
 * 🔒️ Refactor migrate from python-jose to PyJWT. PR [#12](https://github.com/khulnasoft/full-stack-readyapi-template/pull/12) by [@FortiShield](https://github.com/FortiShield).
