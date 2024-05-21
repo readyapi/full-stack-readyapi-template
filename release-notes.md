@@ -2,6 +2,7 @@
 
 ## Latest Changes
 
+* Bump requests from 2.31.0 to 2.32.0 in /backend. PR [#13](https://github.com/khulnasoft/full-stack-readyapi-template/pull/13) by [@dependabot[bot]](https://github.com/apps/dependabot).
 * 🔧 Update VS Code debug config. PR [#18](https://github.com/khulnasoft/full-stack-readyapi-template/pull/18) by [@gitworkflows](https://github.com/gitworkflows).
 * ✏️ Update README.md. PR [#17](https://github.com/khulnasoft/full-stack-readyapi-template/pull/17) by [@gitworkflows](https://github.com/gitworkflows).
 * ♻️ Refactor redirect labels to simplify removing the frontend. PR [#16](https://github.com/khulnasoft/full-stack-readyapi-template/pull/16) by [@gitworkflows](https://github.com/gitworkflows).
