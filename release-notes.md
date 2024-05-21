@@ -2,6 +2,7 @@
 
 ## Latest Changes
 
+* ⚒️ Add minor frontend tweaks. PR [#14](https://github.com/khulnasoft/full-stack-readyapi-template/pull/14) by [@gitworkflows](https://github.com/gitworkflows).
 * 🔒️ Refactor migrate from python-jose to PyJWT. PR [#12](https://github.com/khulnasoft/full-stack-readyapi-template/pull/12) by [@FortiShield](https://github.com/FortiShield).
 * Bump jinja2 from 3.1.3 to 3.1.4 in /backend. PR [#10](https://github.com/khulnasoft/full-stack-readyapi-template/pull/10) by [@dependabot[bot]](https://github.com/apps/dependabot).
 * Update README.md. PR [#11](https://github.com/khulnasoft/full-stack-readyapi-template/pull/11) by [@gitworkflows](https://github.com/gitworkflows).
