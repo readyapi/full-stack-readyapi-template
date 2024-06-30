@@ -2,6 +2,7 @@
 
 ## Latest Changes
 
+* Bump braces from 3.0.2 to 3.0.3 in /frontend in the npm_and_yarn group across 1 directory. PR [#22](https://github.com/khulnasoft/full-stack-readyapi-template/pull/22) by [@dependabot[bot]](https://github.com/apps/dependabot).
 * Bump urllib3 from 2.2.1 to 2.2.2 in /backend in the pip group across 1 directory. PR [#21](https://github.com/khulnasoft/full-stack-readyapi-template/pull/21) by [@dependabot[bot]](https://github.com/apps/dependabot).
 * ♻️ Update DeleteConfirmation component to use new service. PR [#20](https://github.com/khulnasoft/full-stack-readyapi-template/pull/20) by [@FortiShield](https://github.com/FortiShield).
 * ♻️ Refactor redirect labels to simplify removing the frontend. PR [#19](https://github.com/khulnasoft/full-stack-readyapi-template/pull/19) by [@NxPKG](https://github.com/NxPKG).
