@@ -2,6 +2,7 @@
 
 ## Latest Changes
 
+* Bump certifi from 2024.2.2 to 2024.7.4 in /backend in the pip group. PR [#23](https://github.com/khulnasoft/full-stack-readyapi-template/pull/23) by [@dependabot[bot]](https://github.com/apps/dependabot).
 * Bump the pip group in /backend with 2 updates. PR [#24](https://github.com/khulnasoft/full-stack-readyapi-template/pull/24) by [@dependabot[bot]](https://github.com/apps/dependabot).
 * Bump braces from 3.0.2 to 3.0.3 in /frontend in the npm_and_yarn group across 1 directory. PR [#22](https://github.com/khulnasoft/full-stack-readyapi-template/pull/22) by [@dependabot[bot]](https://github.com/apps/dependabot).
 * Bump urllib3 from 2.2.1 to 2.2.2 in /backend in the pip group across 1 directory. PR [#21](https://github.com/khulnasoft/full-stack-readyapi-template/pull/21) by [@dependabot[bot]](https://github.com/apps/dependabot).
