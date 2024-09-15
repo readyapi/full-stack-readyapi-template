@@ -2,10 +2,10 @@ from collections.abc import Generator
 from typing import Annotated
 
 import jwt
-from jwt.exceptions import InvalidTokenError
-from pydantic import ValidationError
 from readyapi import Depends, HTTPException, status
 from readyapi.security import OAuth2PasswordBearer
+from jwt.exceptions import InvalidTokenError
+from pydantic import ValidationError
 from sqldev import Session
 
 from app.core import security

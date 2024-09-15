@@ -23,7 +23,7 @@ import {
 } from "../../client"
 import useAuth from "../../hooks/useAuth"
 import useCustomToast from "../../hooks/useCustomToast"
-import { emailPattern } from "../../utils"
+import { emailPattern, handleError } from "../../utils"
 
 const UserInformation = () => {
   const queryClient = useQueryClient()
@@ -57,13 +57,10 @@ const UserInformation = () => {
       showToast("Success!", "User updated successfully.", "success")
     },
     onError: (err: ApiError) => {
-      const errDetail = (err.body as any)?.detail
-      showToast("Something went wrong.", `${errDetail}`, "error")
+      handleError(err, showToast)
     },
     onSettled: () => {
-      // TODO: can we do just one call now?
-      queryClient.invalidateQueries({ queryKey: ["users"] })
-      queryClient.invalidateQueries({ queryKey: ["currentUser"] })
+      queryClient.invalidateQueries()
     },
   })
 
@@ -83,10 +80,10 @@ const UserInformation = () => {
           User Information
         </Heading>
         <Box
-           w={{ sm: "full", md: "50%" }}
-           as="form"
-           onSubmit={handleSubmit(onSubmit)}
-         >
+          w={{ sm: "full", md: "50%" }}
+          as="form"
+          onSubmit={handleSubmit(onSubmit)}
+        >
           <FormControl>
             <FormLabel color={color} htmlFor="name">
               Full name
@@ -97,12 +94,15 @@ const UserInformation = () => {
                 {...register("full_name", { maxLength: 30 })}
                 type="text"
                 size="md"
+                w="auto"
               />
             ) : (
               <Text
                 size="md"
                 py={2}
                 color={!currentUser?.full_name ? "ui.dim" : "inherit"}
+                isTruncated
+                maxWidth="250px"
               >
                 {currentUser?.full_name || "N/A"}
               </Text>
@@ -121,9 +121,10 @@ const UserInformation = () => {
                 })}
                 type="email"
                 size="md"
+                w="auto"
               />
             ) : (
-              <Text size="md" py={2}>
+              <Text size="md" py={2} isTruncated maxWidth="250px">
                 {currentUser?.email}
               </Text>
             )}

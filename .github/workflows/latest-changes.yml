@@ -29,9 +29,8 @@ jobs:
       - uses: actions/checkout@v4
         with:
           # To allow latest-changes to commit to the main branch
-          token: ${{ secrets.ORG_REPO_TOKEN }}
-      - uses: docker://khulnasoft/latest-changes:latest
-      # - uses: khulnasoft/latest-changes@main
+          token: ${{ secrets.LATEST_CHANGES }}
+      - uses: khulnasoft/latest-changes@0.3.1
         with:
           token: ${{ secrets.GITHUB_TOKEN }}
           latest_changes_file: ./release-notes.md

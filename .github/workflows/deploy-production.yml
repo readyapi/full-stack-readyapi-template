@@ -7,6 +7,8 @@ on:
 
 jobs:
   deploy:
+    # Do not deploy in the main repository, only in user projects
+    if: github.repository_owner != 'readyapi'
     runs-on:
       - self-hosted
       - production
@@ -15,8 +17,8 @@ jobs:
       DOMAIN: ${{ secrets.DOMAIN_PRODUCTION }}
       STACK_NAME: ${{ secrets.STACK_NAME_PRODUCTION }}
       SECRET_KEY: ${{ secrets.SECRET_KEY }}
-      READY_SUPERUSER: ${{ secrets.READY_SUPERUSER }}
-      READY_SUPERUSER_PASSWORD: ${{ secrets.READY_SUPERUSER_PASSWORD }}
+      FIRST_SUPERUSER: ${{ secrets.FIRST_SUPERUSER }}
+      FIRST_SUPERUSER_PASSWORD: ${{ secrets.FIRST_SUPERUSER_PASSWORD }}
       SMTP_HOST: ${{ secrets.SMTP_HOST }}
       SMTP_USER: ${{ secrets.SMTP_USER }}
       SMTP_PASSWORD: ${{ secrets.SMTP_PASSWORD }}

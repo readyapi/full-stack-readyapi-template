@@ -131,9 +131,8 @@ You can set several variables, like:
 * `STACK_NAME`: The name of the stack used for Docker Compose labels and project name, this should be different for `staging`, `production`, etc. You could use the same domain replacing dots with dashes, e.g. `readyapi-project-example-com` and `staging-readyapi-project-example-com`.
 * `BACKEND_CORS_ORIGINS`: A list of allowed CORS origins separated by commas.
 * `SECRET_KEY`: The secret key for the ReadyAPI project, used to sign tokens.
-* `READY_SUPERUSER`: The email of the ready superuser, this superuser will be the one that can create new users.
-* `READY_SUPERUSER_PASSWORD`: The password of the ready superuser.
-* `USERS_OPEN_REGISTRATION`: Whether to allow open registration of new users.
+* `FIRST_SUPERUSER`: The email of the first superuser, this superuser will be the one that can create new users.
+* `FIRST_SUPERUSER_PASSWORD`: The password of the first superuser.
 * `SMTP_HOST`: The SMTP server host to send emails, this would come from your email provider (E.g. Mailgun, Sparkpost, Sendgrid, etc).
 * `SMTP_USER`: The SMTP server user to send emails.
 * `SMTP_PASSWORD`: The SMTP server password to send emails.
@@ -149,7 +148,7 @@ You can set several variables, like:
 
 There are some environment variables only used by GitHub Actions that you can configure:
 
-* `ORG_REPO_TOKEN`: Used by the GitHub Action [latest-changes](https://github.com/khulnasoft/latest-changes) to automatically add release notes based on the PRs merged. It's a personal access token, read the docs for details.
+* `LATEST_CHANGES`: Used by the GitHub Action [latest-changes](https://github.com/khulnasoft/latest-changes) to automatically add release notes based on the PRs merged. It's a personal access token, read the docs for details.
 * `SMOKESHOW_AUTH_KEY`: Used to handle and publish the code coverage using [Smokeshow](https://github.com/samuelcolvin/smokeshow), follow their instructions to create a (free) Smokeshow key.
 
 ### Generate secret keys
@@ -259,11 +258,11 @@ The current Github Actions workflows expect these secrets:
 * `STACK_NAME_PRODUCTION`
 * `STACK_NAME_STAGING`
 * `EMAILS_FROM_EMAIL`
-* `READY_SUPERUSER`
-* `READY_SUPERUSER_PASSWORD`
+* `FIRST_SUPERUSER`
+* `FIRST_SUPERUSER_PASSWORD`
 * `POSTGRES_PASSWORD`
 * `SECRET_KEY`
-* `ORG_REPO_TOKEN`
+* `LATEST_CHANGES`
 * `SMOKESHOW_AUTH_KEY`
 
 ## GitHub Action Deployment Workflows
