@@ -12,7 +12,7 @@ But you have to configure a couple things first. 🤓
 
 * Have a remote server ready and available.
 * Configure the DNS records of your domain to point to the IP of the server you just created.
-* Configure a wildcard subdomain for your domain, so that you can have multiple subdomains for different services, e.g. `*.readyapi-project.example.com`. This will be useful for accessing different components, like `traefik.readyapi-project.example.com`, `adminer.readyapi-project.example.com`, etc. And also for `staging`, like `staging.readyapi-project.example.com`, `staging.adminer.readyapi-project.example.com`, etc.
+* Configure a wildcard subdomain for your domain, so that you can have multiple subdomains for different services, e.g. `*.readyapi-project.example.com`. This will be useful for accessing different components, like `dashboard.readyapi-project.example.com`, `api.readyapi-project.example.com`, `traefik.readyapi-project.example.com`, `adminer.readyapi-project.example.com`, etc. And also for `staging`, like `dashboard.staging.readyapi-project.example.com`, `adminer.staging..readyapi-project.example.com`, etc.
 * Install and configure [Docker](https://docs.docker.com/engine/install/) on the remote server (Docker Engine, not Docker Desktop).
 
 ## Public Traefik
@@ -284,20 +284,20 @@ Traefik UI: `https://traefik.readyapi-project.example.com`
 
 ### Production
 
-Frontend: `https://readyapi-project.example.com`
+Frontend: `https://dashboard.readyapi-project.example.com`
 
-Backend API docs: `https://readyapi-project.example.com/docs`
+Backend API docs: `https://api.readyapi-project.example.com/docs`
 
-Backend API base URL: `https://readyapi-project.example.com/api/`
+Backend API base URL: `https://api.readyapi-project.example.com`
 
 Adminer: `https://adminer.readyapi-project.example.com`
 
 ### Staging
 
-Frontend: `https://staging.readyapi-project.example.com`
+Frontend: `https://dashboard.staging.readyapi-project.example.com`
 
-Backend API docs: `https://staging.readyapi-project.example.com/docs`
+Backend API docs: `https://api.staging.readyapi-project.example.com/docs`
 
-Backend API base URL: `https://staging.readyapi-project.example.com/api/`
+Backend API base URL: `https://api.staging.readyapi-project.example.com`
 
 Adminer: `https://adminer.staging.readyapi-project.example.com`

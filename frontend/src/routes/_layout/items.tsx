@@ -1,7 +1,5 @@
 import {
-  Button,
   Container,
-  Flex,
   Heading,
   SkeletonText,
   Table,
@@ -20,6 +18,7 @@ import { z } from "zod"
 import { ItemsService } from "../../client"
 import ActionsMenu from "../../components/Common/ActionsMenu"
 import Navbar from "../../components/Common/Navbar"
+import { PaginationFooter } from "../../components/Common/PaginationFooter.tsx"
 import AddItem from "../../components/Items/AddItem"
 
 const itemsSearchSchema = z.object({
@@ -112,21 +111,12 @@ function ItemsTable() {
           )}
         </Table>
       </TableContainer>
-      <Flex
-        gap={4}
-        alignItems="center"
-        mt={4}
-        direction="row"
-        justifyContent="flex-end"
-      >
-        <Button onClick={() => setPage(page - 1)} isDisabled={!hasPreviousPage}>
-          Previous
-        </Button>
-        <span>Page {page}</span>
-        <Button isDisabled={!hasNextPage} onClick={() => setPage(page + 1)}>
-          Next
-        </Button>
-      </Flex>
+      <PaginationFooter
+        page={page}
+        onChangePage={setPage}
+        hasNextPage={hasNextPage}
+        hasPreviousPage={hasPreviousPage}
+      />
     </>
   )
 }
