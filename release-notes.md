@@ -4,6 +4,7 @@
 
 ### Refactors
 
+* 👷 Improve Playwright CI speed: sharding. PR [#35](https://github.com/readyapi/full-stack-readyapi-template/pull/35) by [@NxPKG](https://github.com/NxPKG).
 * 👷 Improve Playwright CI speed: sharding (paralel runs), run in Docker to use cache, use env vars. PR [#1405](https://github.com/readyapi/full-stack-readyapi-template/pull/1405) by [@khulnasoft](https://github.com/khulnasoft).
 * ♻️ Add PaginationFooter component. PR [#1381](https://github.com/readyapi/full-stack-readyapi-template/pull/1381) by [@saltie2193](https://github.com/saltie2193).
 * ♻️ Refactored code to use encryption algorithm name from settings for consistency. PR [#1160](https://github.com/readyapi/full-stack-readyapi-template/pull/1160) by [@sameeramin](https://github.com/sameeramin).
