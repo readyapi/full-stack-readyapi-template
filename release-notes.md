@@ -2,6 +2,8 @@
 
 ## Latest Changes
 
+* Bump vite from 5.0.13 to 5.4.11 in /frontend in the npm_and_yarn group across 1 directory. PR [#36](https://github.com/readyapi/full-stack-readyapi-template/pull/36) by [@dependabot[bot]](https://github.com/apps/dependabot).
+
 ### Refactors
 
 * 👷 Improve Playwright CI speed: sharding. PR [#35](https://github.com/readyapi/full-stack-readyapi-template/pull/35) by [@NxPKG](https://github.com/NxPKG).
