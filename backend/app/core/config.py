@@ -18,7 +18,7 @@ from typing_extensions import Self
 def parse_cors(v: Any) -> list[str] | str:
     if isinstance(v, str) and not v.startswith("["):
         return [i.strip() for i in v.split(",")]
-    elif isinstance(v, (list, str)):
+    elif isinstance(v, list | str):
         return v
     raise ValueError(v)
 
@@ -59,16 +59,14 @@ class Settings(BaseSettings):
     @computed_field  # type: ignore[prop-decorator]
     @property
     def SQLALCHEMY_DATABASE_URI(self) -> PostgresDsn:
-        # Use an integer for the port
-        url = MultiHostUrl.build(
+        return MultiHostUrl.build(
             scheme="postgresql+psycopg",
             username=self.POSTGRES_USER,
             password=self.POSTGRES_PASSWORD,
             host=self.POSTGRES_SERVER,
-            port=self.POSTGRES_PORT,  # Pass as int
-            path=f"/{self.POSTGRES_DB}",
+            port=self.POSTGRES_PORT,
+            path=self.POSTGRES_DB,
         )
-        return PostgresDsn(str(url))
 
     SMTP_TLS: bool = True
     SMTP_SSL: bool = False
@@ -117,8 +115,8 @@ class Settings(BaseSettings):
         self._check_default_secret(
             "FIRST_SUPERUSER_PASSWORD", self.FIRST_SUPERUSER_PASSWORD
         )
+
         return self
 
 
-# Instantiate the settings
 settings = Settings()  # type: ignore
