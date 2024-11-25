@@ -24,8 +24,3 @@ def test_email(email_to: EmailStr) -> Message:
         html_content=email_data.html_content,
     )
     return Message(message="Test email sent")
-
-
-@router.get("/health-check/")
-async def health_check() -> bool:
-    return True

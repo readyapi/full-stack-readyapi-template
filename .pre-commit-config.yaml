@@ -10,11 +10,7 @@ repos:
         args:
           - --unsafe
       - id: end-of-file-fixer
-        exclude: |
-            (?x)^(
-                frontend/src/client/.*|
-                backend/app/email-templates/build/.*
-            )$
+        exclude: ^frontend/src/client/.*
       - id: trailing-whitespace
         exclude: ^frontend/src/client/.*
   - repo: https://github.com/charliermarsh/ruff-pre-commit

@@ -64,7 +64,7 @@ class ItemBase(SQLModel):
 
 # Properties to receive on item creation
 class ItemCreate(ItemBase):
-    pass
+    title: str = Field(min_length=1, max_length=255)
 
 
 # Properties to receive on item update

@@ -63,6 +63,7 @@ _exclude:
   # Global
   - .vscode
   - .mypy_cache
+  - poetry.lock
   # Python
   - __pycache__
   - app.egg-info
@@ -70,6 +71,7 @@ _exclude:
   - .mypy_cache
   - .coverage
   - htmlcov
+  - poetry.lock
   - .cache
   - .venv
   # Frontend
@@ -97,4 +99,4 @@ _exclude:
 _answers_file: .copier/.copier-answers.yml
 
 _tasks:
-  - ["{{ _copier_python }}", .copier/update_dotenv.py]
+  - "python .copier/update_dotenv.py"
