@@ -59,13 +59,13 @@ class Settings(BaseSettings):
     @computed_field  # type: ignore[prop-decorator]
     @property
     def SQLALCHEMY_DATABASE_URI(self) -> PostgresDsn:
-        # Convert MultiHostUrl to PostgresDsn for compatibility
+        # Use an integer for the port
         url = MultiHostUrl.build(
             scheme="postgresql+psycopg",
             username=self.POSTGRES_USER,
             password=self.POSTGRES_PASSWORD,
             host=self.POSTGRES_SERVER,
-            port=str(self.POSTGRES_PORT),  # Convert port to string
+            port=self.POSTGRES_PORT,  # Pass as int
             path=f"/{self.POSTGRES_DB}",
         )
         return PostgresDsn(str(url))
