@@ -2,7 +2,7 @@ import uuid
 from unittest.mock import patch
 
 from readyapi.testclient import TestClient
-from sqldev import Session, select
+from sqlmodel import Session, select
 
 from app import crud
 from app.core.config import settings

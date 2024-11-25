@@ -4,6 +4,7 @@
 
 ### Refactors
 
+* 👷 Improve Playwright CI speed: sharding (paralel runs), run in Docker to use cache, use env vars. PR [#1405](https://github.com/readyapi/full-stack-readyapi-template/pull/1405) by [@khulnasoft](https://github.com/khulnasoft).
 * ♻️ Add PaginationFooter component. PR [#1381](https://github.com/readyapi/full-stack-readyapi-template/pull/1381) by [@saltie2193](https://github.com/saltie2193).
 * ♻️ Refactored code to use encryption algorithm name from settings for consistency. PR [#1160](https://github.com/readyapi/full-stack-readyapi-template/pull/1160) by [@sameeramin](https://github.com/sameeramin).
 * 🔊 Enable logging for email utils by default. PR [#1374](https://github.com/readyapi/full-stack-readyapi-template/pull/1374) by [@ihmily](https://github.com/ihmily).
@@ -12,10 +13,13 @@
 
 ### Docs
 
+* 📝 Update `deployment.md`, instructions to install GitHub Runner in non-root VMs. PR [#1412](https://github.com/readyapi/full-stack-readyapi-template/pull/1412) by [@khulnasoft](https://github.com/khulnasoft).
 * 📝 Add MailCatcher to `development.md`. PR [#1387](https://github.com/readyapi/full-stack-readyapi-template/pull/1387) by [@tobiase](https://github.com/tobiase).
 
 ### Internal
 
+* ⬆ Bump khulnasoft/latest-changes from 0.3.1 to 0.3.2. PR [#1418](https://github.com/readyapi/full-stack-readyapi-template/pull/1418) by [@dependabot[bot]](https://github.com/apps/dependabot).
+* 👷 Update issue manager workflow. PR [#1398](https://github.com/readyapi/full-stack-readyapi-template/pull/1398) by [@alejsdev](https://github.com/alejsdev).
 * 👷 Fix smokeshow, checkout files on CI. PR [#1395](https://github.com/readyapi/full-stack-readyapi-template/pull/1395) by [@khulnasoft](https://github.com/khulnasoft).
 * 👷 Update `labeler.yml`. PR [#1388](https://github.com/readyapi/full-stack-readyapi-template/pull/1388) by [@khulnasoft](https://github.com/khulnasoft).
 * 🔧 Add .auth playwright folder to `.gitignore`. PR [#1383](https://github.com/readyapi/full-stack-readyapi-template/pull/1383) by [@justin-p](https://github.com/justin-p).
@@ -184,7 +188,7 @@ Lots of new things! 🎁
 
 ### Upgrades
 
-* ⬆️ Update SQLDev to version `>=0.0.21`. PR [#1275](https://github.com/khulnasoft/full-stack-readyapi-template/pull/1275) by [@alejsdev](https://github.com/alejsdev).
+* ⬆️ Update SQLModel to version `>=0.0.21`. PR [#1275](https://github.com/khulnasoft/full-stack-readyapi-template/pull/1275) by [@alejsdev](https://github.com/alejsdev).
 * ⬆️ Upgrade Traefik. PR [#1241](https://github.com/khulnasoft/full-stack-readyapi-template/pull/1241) by [@khulnasoft](https://github.com/khulnasoft).
 * ⬆️ Bump requests from 2.31.0 to 2.32.0 in /backend. PR [#1211](https://github.com/khulnasoft/full-stack-readyapi-template/pull/1211) by [@dependabot[bot]](https://github.com/apps/dependabot).
 * ⬆️ Bump jinja2 from 3.1.3 to 3.1.4 in /backend. PR [#1196](https://github.com/khulnasoft/full-stack-readyapi-template/pull/1196) by [@dependabot[bot]](https://github.com/apps/dependabot).
@@ -237,7 +241,7 @@ Lots of new things! 🎁
 
 ## 0.6.0
 
-Latest ReadyAPI, Pydantic, SQLDev 🚀
+Latest ReadyAPI, Pydantic, SQLModel 🚀
 
 Brand new frontend with React, TS, Vite, Chakra UI, TanStack Query/Router, generated client/SDK 🎨
 
@@ -247,8 +251,8 @@ Test cov > 90% ✅
 
 ### Features
 
-* ✨ Adopt SQLDev, create models, start using it. PR [#559](https://github.com/khulnasoft/full-stack-readyapi-template/pull/559) by [@khulnasoft](https://github.com/khulnasoft).
-* ✨ Upgrade items router with new SQLDev models, simplified logic, and new ReadyAPI Annotated dependencies. PR [#560](https://github.com/khulnasoft/full-stack-readyapi-template/pull/560) by [@khulnasoft](https://github.com/khulnasoft).
+* ✨ Adopt SQLModel, create models, start using it. PR [#559](https://github.com/khulnasoft/full-stack-readyapi-template/pull/559) by [@khulnasoft](https://github.com/khulnasoft).
+* ✨ Upgrade items router with new SQLModel models, simplified logic, and new ReadyAPI Annotated dependencies. PR [#560](https://github.com/khulnasoft/full-stack-readyapi-template/pull/560) by [@khulnasoft](https://github.com/khulnasoft).
 * ✨ Migrate from pgAdmin to Adminer. PR [#692](https://github.com/khulnasoft/full-stack-readyapi-template/pull/692) by [@khulnasoft](https://github.com/khulnasoft).
 * ✨ Add support for setting `POSTGRES_PORT`. PR [#333](https://github.com/khulnasoft/full-stack-readyapi-template/pull/333) by [@uepoch](https://github.com/uepoch).
 * ⬆ Upgrade Flower version and command. PR [#447](https://github.com/khulnasoft/full-stack-readyapi-template/pull/447) by [@maurob](https://github.com/maurob).
@@ -273,7 +277,7 @@ Test cov > 90% ✅
 * ✨ Add Copier, migrate from Cookiecutter, in a way that supports using the project as is, forking or cloning it. PR [#612](https://github.com/khulnasoft/full-stack-readyapi-template/pull/612) by [@khulnasoft](https://github.com/khulnasoft).
 * ➕ Replace black, isort, flake8, autoflake with ruff and upgrade mypy. PR [#610](https://github.com/khulnasoft/full-stack-readyapi-template/pull/610) by [@khulnasoft](https://github.com/khulnasoft).
 * ♻ Refactor items and services endpoints to return count and data, and add CI tests. PR [#599](https://github.com/khulnasoft/full-stack-readyapi-template/pull/599) by [@estebanx64](https://github.com/estebanx64).
-* ✨ Add support for updating items and upgrade SQLDev to 0.0.16 (which supports model object updates). PR [#601](https://github.com/khulnasoft/full-stack-readyapi-template/pull/601) by [@khulnasoft](https://github.com/khulnasoft).
+* ✨ Add support for updating items and upgrade SQLModel to 0.0.16 (which supports model object updates). PR [#601](https://github.com/khulnasoft/full-stack-readyapi-template/pull/601) by [@khulnasoft](https://github.com/khulnasoft).
 * ✨ Add dark mode to new-frontend and conditional sidebar items. PR [#600](https://github.com/khulnasoft/full-stack-readyapi-template/pull/600) by [@alejsdev](https://github.com/alejsdev).
 * ✨ Migrate to RouterProvider and other refactors . PR [#598](https://github.com/khulnasoft/full-stack-readyapi-template/pull/598) by [@alejsdev](https://github.com/alejsdev).
 * ✨ Add delete_user; refactor delete_item. PR [#594](https://github.com/khulnasoft/full-stack-readyapi-template/pull/594) by [@alejsdev](https://github.com/alejsdev).

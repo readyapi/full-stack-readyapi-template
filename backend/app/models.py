@@ -1,11 +1,11 @@
 import uuid
 
 from pydantic import EmailStr
-from sqldev import Field, Relationship, SQLDev
+from sqlmodel import Field, Relationship, SQLModel
 
 
 # Shared properties
-class UserBase(SQLDev):
+class UserBase(SQLModel):
     email: EmailStr = Field(unique=True, index=True, max_length=255)
     is_active: bool = True
     is_superuser: bool = False
@@ -17,7 +17,7 @@ class UserCreate(UserBase):
     password: str = Field(min_length=8, max_length=40)
 
 
-class UserRegister(SQLDev):
+class UserRegister(SQLModel):
     email: EmailStr = Field(max_length=255)
     password: str = Field(min_length=8, max_length=40)
     full_name: str | None = Field(default=None, max_length=255)
@@ -29,12 +29,12 @@ class UserUpdate(UserBase):
     password: str | None = Field(default=None, min_length=8, max_length=40)
 
 
-class UserUpdateMe(SQLDev):
+class UserUpdateMe(SQLModel):
     full_name: str | None = Field(default=None, max_length=255)
     email: EmailStr | None = Field(default=None, max_length=255)
 
 
-class UpdatePassword(SQLDev):
+class UpdatePassword(SQLModel):
     current_password: str = Field(min_length=8, max_length=40)
     new_password: str = Field(min_length=8, max_length=40)
 
@@ -51,13 +51,13 @@ class UserPublic(UserBase):
     id: uuid.UUID
 
 
-class UsersPublic(SQLDev):
+class UsersPublic(SQLModel):
     data: list[UserPublic]
     count: int
 
 
 # Shared properties
-class ItemBase(SQLDev):
+class ItemBase(SQLModel):
     title: str = Field(min_length=1, max_length=255)
     description: str | None = Field(default=None, max_length=255)
 
@@ -88,27 +88,27 @@ class ItemPublic(ItemBase):
     owner_id: uuid.UUID
 
 
-class ItemsPublic(SQLDev):
+class ItemsPublic(SQLModel):
     data: list[ItemPublic]
     count: int
 
 
 # Generic message
-class Message(SQLDev):
+class Message(SQLModel):
     message: str
 
 
 # JSON payload containing access token
-class Token(SQLDev):
+class Token(SQLModel):
     access_token: str
     token_type: str = "bearer"
 
 
 # Contents of JWT token
-class TokenPayload(SQLDev):
+class TokenPayload(SQLModel):
     sub: str | None = None
 
 
-class NewPassword(SQLDev):
+class NewPassword(SQLModel):
     token: str
     new_password: str = Field(min_length=8, max_length=40)
