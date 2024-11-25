@@ -18,8 +18,8 @@ import { z } from "zod"
 import { ItemsService } from "../../client"
 import ActionsMenu from "../../components/Common/ActionsMenu"
 import Navbar from "../../components/Common/Navbar"
-import { PaginationFooter } from "../../components/Common/PaginationFooter.tsx"
 import AddItem from "../../components/Items/AddItem"
+import { PaginationFooter } from "../../components/Common/PaginationFooter.tsx"
 
 const itemsSearchSchema = z.object({
   page: z.number().catch(1),
