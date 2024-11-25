@@ -1,6 +1,6 @@
 import logging
 
-from sqldev import Session
+from sqlmodel import Session
 
 from app.core.db import engine, init_db
 

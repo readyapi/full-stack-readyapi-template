@@ -1,7 +1,7 @@
 import uuid
 
 from readyapi.testclient import TestClient
-from sqldev import Session
+from sqlmodel import Session
 
 from app.core.config import settings
 from app.tests.utils.item import create_random_item

@@ -18,10 +18,10 @@ fileConfig(config.config_file_name)
 # target_metadata = mymodel.Base.metadata
 # target_metadata = None
 
-from app.models import SQLDev  # noqa
+from app.models import SQLModel  # noqa
 from app.core.config import settings # noqa
 
-target_metadata = SQLDev.metadata
+target_metadata = SQLModel.metadata
 
 # other values from the config, defined by the needs of env.py,
 # can be acquired:

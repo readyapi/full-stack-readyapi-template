@@ -2,7 +2,7 @@ from collections.abc import Generator
 
 import pytest
 from readyapi.testclient import TestClient
-from sqldev import Session, delete
+from sqlmodel import Session, delete
 
 from app.core.config import settings
 from app.core.db import engine, init_db

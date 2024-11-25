@@ -1,4 +1,4 @@
-from sqldev import Session
+from sqlmodel import Session
 
 from app import crud
 from app.models import Item, ItemCreate

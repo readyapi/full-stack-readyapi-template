@@ -1,5 +1,5 @@
 from readyapi.encoders import jsonable_encoder
-from sqldev import Session
+from sqlmodel import Session
 
 from app import crud
 from app.core.security import verify_password
