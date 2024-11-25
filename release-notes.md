@@ -4,6 +4,7 @@
 
 ### Refactors
 
+* 👷 Improve Playwright CI speed: sharding (paralel runs), run in Docker to use cache, use env vars. PR [#1405](https://github.com/readyapi/full-stack-readyapi-template/pull/1405) by [@khulnasoft](https://github.com/khulnasoft).
 * ♻️ Add PaginationFooter component. PR [#1381](https://github.com/readyapi/full-stack-readyapi-template/pull/1381) by [@saltie2193](https://github.com/saltie2193).
 * ♻️ Refactored code to use encryption algorithm name from settings for consistency. PR [#1160](https://github.com/readyapi/full-stack-readyapi-template/pull/1160) by [@sameeramin](https://github.com/sameeramin).
 * 🔊 Enable logging for email utils by default. PR [#1374](https://github.com/readyapi/full-stack-readyapi-template/pull/1374) by [@ihmily](https://github.com/ihmily).
@@ -12,10 +13,13 @@
 
 ### Docs
 
+* 📝 Update `deployment.md`, instructions to install GitHub Runner in non-root VMs. PR [#1412](https://github.com/readyapi/full-stack-readyapi-template/pull/1412) by [@khulnasoft](https://github.com/khulnasoft).
 * 📝 Add MailCatcher to `development.md`. PR [#1387](https://github.com/readyapi/full-stack-readyapi-template/pull/1387) by [@tobiase](https://github.com/tobiase).
 
 ### Internal
 
+* ⬆ Bump khulnasoft/latest-changes from 0.3.1 to 0.3.2. PR [#1418](https://github.com/readyapi/full-stack-readyapi-template/pull/1418) by [@dependabot[bot]](https://github.com/apps/dependabot).
+* 👷 Update issue manager workflow. PR [#1398](https://github.com/readyapi/full-stack-readyapi-template/pull/1398) by [@alejsdev](https://github.com/alejsdev).
 * 👷 Fix smokeshow, checkout files on CI. PR [#1395](https://github.com/readyapi/full-stack-readyapi-template/pull/1395) by [@khulnasoft](https://github.com/khulnasoft).
 * 👷 Update `labeler.yml`. PR [#1388](https://github.com/readyapi/full-stack-readyapi-template/pull/1388) by [@khulnasoft](https://github.com/khulnasoft).
 * 🔧 Add .auth playwright folder to `.gitignore`. PR [#1383](https://github.com/readyapi/full-stack-readyapi-template/pull/1383) by [@justin-p](https://github.com/justin-p).
