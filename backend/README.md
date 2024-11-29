@@ -103,7 +103,7 @@ You should see an output like:
 root@7f2607af31c3:/app#
 ```
 
-that means that you are in a `bash` session inside your container, as a `root` user, under the `/app` directory, this directory has another directory called "app" inside, that's where your code lives inside the container: `/app`.
+that means that you are in a `bash` session inside your container, as a `root` user, under the `/app` directory, this directory has another directory called "app" inside, that's where your code lives inside the container: `/app/app`.
 
 There you can use the script `/start-reload.sh` to run the debug live reloading server. You can run that script from inside the container with:
 
