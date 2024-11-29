@@ -94,7 +94,7 @@ $ docker compose up -d
 and then `exec` inside the running container:
 
 ```console
-$ docker compose exec backend bash
+$ docker compose up -d
 ```
 
 You should see an output like:
