@@ -2,7 +2,7 @@ import uuid
 from typing import Any
 
 from readyapi import APIRouter, Depends, HTTPException
-from sqlmodel import col, delete, func, select
+from sqldev import col, delete, func, select
 
 from app import crud
 from app.api.deps import (
@@ -90,7 +90,7 @@ def update_user_me(
                 status_code=409, detail="User with this email already exists"
             )
     user_data = user_in.model_dump(exclude_unset=True)
-    current_user.sqlmodel_update(user_data)
+    current_user.sqldev_update(user_data)
     session.add(current_user)
     session.commit()
     session.refresh(current_user)

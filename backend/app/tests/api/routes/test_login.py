@@ -1,7 +1,7 @@
 from unittest.mock import patch
 
 from readyapi.testclient import TestClient
-from sqlmodel import Session, select
+from sqldev import Session, select
 
 from app.core.config import settings
 from app.core.security import verify_password

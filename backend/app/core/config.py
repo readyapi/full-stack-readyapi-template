@@ -10,7 +10,6 @@ from pydantic import (
     computed_field,
     model_validator,
 )
-from pydantic_core import MultiHostUrl
 from pydantic_settings import BaseSettings, SettingsConfigDict
 from typing_extensions import Self
 
@@ -25,7 +24,7 @@ def parse_cors(v: Any) -> list[str] | str:
 
 class Settings(BaseSettings):
     model_config = SettingsConfigDict(
-        env_file=".env", env_ignore_empty=True, extra="ignore"
+        env_file=".env", env_ignore_empty=True, extra="ignore", env_file_encoding="utf-8"
     )
     API_V1_STR: str = "/api/v1"
     SECRET_KEY: str = secrets.token_urlsafe(32)
@@ -57,13 +56,13 @@ class Settings(BaseSettings):
     @computed_field  # type: ignore[prop-decorator]
     @property
     def SQLALCHEMY_DATABASE_URI(self) -> PostgresDsn:
-        return MultiHostUrl.build(
+        return PostgresDsn.build(
             scheme="postgresql+psycopg",
             username=self.POSTGRES_USER,
             password=self.POSTGRES_PASSWORD,
             host=self.POSTGRES_SERVER,
             port=self.POSTGRES_PORT,
-            path=self.POSTGRES_DB,
+            path=f"/{self.POSTGRES_DB}",
         )
 
     SMTP_TLS: bool = True
@@ -72,7 +71,7 @@ class Settings(BaseSettings):
     SMTP_HOST: str | None = None
     SMTP_USER: str | None = None
     SMTP_PASSWORD: str | None = None
-    # TODO: update type to EmailStr when sqlmodel supports it
+    # TODO: update type to EmailStr when sqldev supports it
     EMAILS_FROM_EMAIL: str | None = None
     EMAILS_FROM_NAME: str | None = None
 
@@ -89,16 +88,16 @@ class Settings(BaseSettings):
     def emails_enabled(self) -> bool:
         return bool(self.SMTP_HOST and self.EMAILS_FROM_EMAIL)
 
-    # TODO: update type to EmailStr when sqlmodel supports it
+    # TODO: update type to EmailStr when sqldev supports it
     EMAIL_TEST_USER: str = "test@example.com"
-    # TODO: update type to EmailStr when sqlmodel supports it
+    # TODO: update type to EmailStr when sqldev supports it
     FIRST_SUPERUSER: str
     FIRST_SUPERUSER_PASSWORD: str
 
     def _check_default_secret(self, var_name: str, value: str | None) -> None:
-        if value == "changethis":
+        if value == "changethis" or value is None:
             message = (
-                f'The value of {var_name} is "changethis", '
+                f'The value of {var_name} is "changethis" or None, '
                 "for security, please change it, at least for deployments."
             )
             if self.ENVIRONMENT == "local":
@@ -108,11 +107,14 @@ class Settings(BaseSettings):
 
     @model_validator(mode="after")
     def _enforce_non_default_secrets(self) -> Self:
-        self._check_default_secret("SECRET_KEY", self.SECRET_KEY)
-        self._check_default_secret("POSTGRES_PASSWORD", self.POSTGRES_PASSWORD)
-        self._check_default_secret(
-            "FIRST_SUPERUSER_PASSWORD", self.FIRST_SUPERUSER_PASSWORD
-        )
+        if self.SECRET_KEY in ["changethis", None]:
+            self._check_default_secret("SECRET_KEY", self.SECRET_KEY)
+        if self.POSTGRES_PASSWORD in ["changethis", None]:
+            self._check_default_secret("POSTGRES_PASSWORD", self.POSTGRES_PASSWORD)
+        if self.FIRST_SUPERUSER_PASSWORD in ["changethis", None]:
+            self._check_default_secret(
+                "FIRST_SUPERUSER_PASSWORD", self.FIRST_SUPERUSER_PASSWORD
+            )
 
         return self
 
