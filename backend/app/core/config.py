@@ -10,7 +10,6 @@ from pydantic import (
     computed_field,
     model_validator,
 )
-from pydantic_core import MultiHostUrl
 from pydantic_settings import BaseSettings, SettingsConfigDict
 from typing_extensions import Self
 
@@ -96,9 +95,9 @@ class Settings(BaseSettings):
     FIRST_SUPERUSER_PASSWORD: str
 
     def _check_default_secret(self, var_name: str, value: str | None) -> None:
-        if value == "changethis":
+        if value == "changethis" or value is None:
             message = (
-                f'The value of {var_name} is "changethis", '
+                f'The value of {var_name} is "changethis" or None, '
                 "for security, please change it, at least for deployments."
             )
             if self.ENVIRONMENT == "local":
@@ -108,11 +107,11 @@ class Settings(BaseSettings):
 
     @model_validator(mode="after")
     def _enforce_non_default_secrets(self) -> Self:
-        if self.SECRET_KEY == "changethis":
+        if self.SECRET_KEY in ["changethis", None]:
             self._check_default_secret("SECRET_KEY", self.SECRET_KEY)
-        if self.POSTGRES_PASSWORD == "changethis":
+        if self.POSTGRES_PASSWORD in ["changethis", None]:
             self._check_default_secret("POSTGRES_PASSWORD", self.POSTGRES_PASSWORD)
-        if self.FIRST_SUPERUSER_PASSWORD == "changethis":
+        if self.FIRST_SUPERUSER_PASSWORD in ["changethis", None]:
             self._check_default_secret(
                 "FIRST_SUPERUSER_PASSWORD", self.FIRST_SUPERUSER_PASSWORD
             )
