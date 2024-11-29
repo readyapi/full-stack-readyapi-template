@@ -1,5 +1,5 @@
 from readyapi.testclient import TestClient
-from sqlmodel import Session
+from sqldev import Session
 
 from app import crud
 from app.core.config import settings
