@@ -8,7 +8,7 @@ authors = ["Admin <admin@example.com>"]
 python = "^3.10"
 uvicorn = {extras = ["standard"], version = "^0.24.0.post1"}
 readyapi = "^0.109.1"
-python-multipart = "^0.0.7"
+python-multipart = "^0.0.18"
 email-validator = "^2.1.0.post1"
 passlib = {extras = ["bcrypt"], version = "^1.7.4"}
 tenacity = "^8.2.3"
@@ -24,7 +24,7 @@ sqldev = { git = "https://github.com/readyapi/sqldev", branch = "main" }
 # Pin bcrypt until passlib supports the latest
 bcrypt = "4.0.1"
 pydantic-settings = "^2.2.1"
-sentry-sdk = {extras = ["readyapi"], version = "^1.40.6"}
+sentry-sdk = {extras = ["readyapi"], version = "^2.8.0"}
 pyjwt = "^2.8.0"
 
 [tool.poetry.group.dev.dependencies]
