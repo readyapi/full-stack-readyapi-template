@@ -18,12 +18,14 @@ dependencies = [
     "bcrypt==4.0.1",  # Pin bcrypt until passlib supports the latest
     "pydantic-settings<3.0.0,>=2.2.1",
     "sentry-sdk[readyapi]<2.0.0,>=0.112.0",
-    "pyjwt<3.0.0,>=2.8.0",
-    "sqldev<1.0.0,>=0.0.19",
+    "pyjwt<3.0.0,>=2.8.0"
 ]
 
-sqldev = { git = "https://github.com/readyapi/sqldev.git" }
-readyapi = { git = "https://github.com/readyapi/readyapi.git" }
+[project.optional-dependencies]
+dev = [
+    "sqlmodel>=0.0.8",
+    "readyapi>=0.112.0"
+]
 
 [tool.uv]
 dev-dependencies = [
