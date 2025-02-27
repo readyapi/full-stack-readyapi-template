@@ -59,6 +59,7 @@ dependencies = [
     { name = "python-multipart" },
     { name = "readyapi", extra = ["standard"] },
     { name = "sentry-sdk" },
+    { name = "sqldev" },
     { name = "tenacity" },
 ]
 
@@ -94,7 +95,8 @@ requires-dist = [
     { name = "python-multipart", specifier = ">=0.0.7,<1.0.0" },
     { name = "readyapi", marker = "extra == 'dev'", specifier = ">=0.112.0" },
     { name = "readyapi", extras = ["standard"], specifier = ">=0.112.0,<1.0.0" },
-    { name = "sentry-sdk", extras = ["readyapi"], specifier = ">=0.112.0,<2.0.0" },
+    { name = "sentry-sdk", extras = ["readyapi"], specifier = ">=1.40.6,<2.0.0" },
+    { name = "sqldev", specifier = ">=0.0.8,<1.0.0" },
     { name = "sqlmodel", marker = "extra == 'dev'", specifier = ">=0.0.8" },
     { name = "tenacity", specifier = ">=8.2.3,<9.0.0" },
 ]
@@ -1342,6 +1344,19 @@ wheels = [
     { url = "https://files.pythonhosted.org/packages/b2/27/17f143013aabbe1256dce19061eafdce0b0142465ce32168cdb9a18c04b1/SQLAlchemy-2.0.38-cp313-cp313-win32.whl", hash = "sha256:eae27ad7580529a427cfdd52c87abb2dfb15ce2b7a3e0fc29fbb63e2ed6f8120", size = 2073023 },
     { url = "https://files.pythonhosted.org/packages/e2/3e/259404b03c3ed2e7eee4c179e001a07d9b61070334be91124cf4ad32eec7/SQLAlchemy-2.0.38-cp313-cp313-win_amd64.whl", hash = "sha256:b335a7c958bc945e10c522c069cd6e5804f4ff20f9a744dd38e748eb602cbbda", size = 2096908 },
     { url = "https://files.pythonhosted.org/packages/aa/e4/592120713a314621c692211eba034d09becaf6bc8848fabc1dc2a54d8c16/SQLAlchemy-2.0.38-py3-none-any.whl", hash = "sha256:63178c675d4c80def39f1febd625a6333f44c0ba269edd8a468b156394b27753", size = 1896347 },
+]
+
+[[package]]
+name = "sqldev"
+version = "0.0.19"
+source = { registry = "https://pypi.org/simple" }
+dependencies = [
+    { name = "pydantic" },
+    { name = "sqlalchemy" },
+]
+sdist = { url = "https://files.pythonhosted.org/packages/a3/0b/6f4ee5a5e9101a480d281962f199c0967bf4f6826e2a58384c5d96b84e37/sqldev-0.0.19.tar.gz", hash = "sha256:f7883713846b6af7bf9ca8a1dd0ce1621adb0b7a28c601c300657a00afd344bb", size = 109807 }
+wheels = [
+    { url = "https://files.pythonhosted.org/packages/e6/df/a823f80ce9fdd9fe41a0f10b71d6726ddcffe73da1823fb606f12ed3be66/sqldev-0.0.19-py3-none-any.whl", hash = "sha256:dd57febddea84a317cc55722e0a458bfc440e7dab40ad837bd22392b4a8c0ff7", size = 27988 },
 ]
 
 [[package]]
