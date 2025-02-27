@@ -20,8 +20,6 @@ dependencies = [
     "pyjwt<3.0.0,>=2.8.0"
 ]
 
-# Declare the Git dependency separately
-[tool.pdm.dependencies]
 sqldev = { git = "https://github.com/readyapi/sqldev.git" }
 readyapi = { git = "https://github.com/readyapi/readyapi.git" }
 
