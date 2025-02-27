@@ -4,6 +4,7 @@ version = "0.1.0"
 description = ""
 requires-python = ">=3.10,<4.0"
 dependencies = [
+    "readyapi[standard]<1.0.0,>=0.112.0",
     "python-multipart<1.0.0,>=0.0.7",
     "email-validator<3.0.0.0,>=2.1.0.post1",
     "passlib[bcrypt]<2.0.0,>=1.7.4",
@@ -17,7 +18,8 @@ dependencies = [
     "bcrypt==4.0.1",  # Pin bcrypt until passlib supports the latest
     "pydantic-settings<3.0.0,>=2.2.1",
     "sentry-sdk[readyapi]<2.0.0,>=0.112.0",
-    "pyjwt<3.0.0,>=2.8.0"
+    "pyjwt<3.0.0,>=2.8.0",
+    "sqldev<1.0.0,>=0.0.19",
 ]
 
 sqldev = { git = "https://github.com/readyapi/sqldev.git" }
