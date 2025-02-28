@@ -2,6 +2,8 @@
 
 ## Latest Changes
 
+* 🐛 Fix required password validation when editing user fields. PR [#47](https://github.com/readyapi/full-stack-readyapi-template/pull/47) by [@khulnasoft-bot](https://github.com/khulnasoft-bot).
+
 ### Fixes
 
 * 🐛 Fix required password validation when editing user fields. PR [#1508](https://github.com/readyapi/full-stack-readyapi-template/pull/1508) by [@jpizquierdo](https://github.com/jpizquierdo).
